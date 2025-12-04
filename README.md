@@ -4,11 +4,11 @@ This repository contains the final technical deliverable for the Movie Interest 
 
 ## Project (sounce files) Contents
 - [`capstone_final_modeling.ipynb`](capstone_final_modeling.ipynb) – end-to-end analysis notebook covering data intake, feature engineering, modeling, evaluation, and business-facing findings.
-- `src/data.py` – helpers for loading MovieLens 100K and joining it with TMDB metadata.
-- `src/features.py` – reusable feature engineering pipeline (numeric scaling, genre/user preference encodings, optional TF-IDF text vectors).
-- `src/modeling.py` – modeling utilities (stratified splits, evaluation helpers, KNN and Random Forest trainers).
+- [`src/data.py`](src/data.py) – helpers for loading MovieLens 100K and joining it with TMDB metadata.
+- [`src/features.py`](src/features.py) – reusable feature engineering pipeline (numeric scaling, genre/user preference encodings, optional TF-IDF text vectors).
+- [`src/modeling.py`](src/modeling.py) – modeling utilities (stratified splits, evaluation helpers, KNN and Random Forest trainers).
 
-> The notebooks expect the raw MovieLens and TMDB CSV files to live under `./Data/` relative to this folder (`./Data/ml-100k`, `./Data/TMDB-5000`). Adjust `DATA_DIR`, `ML_PATH`, and `TMDB_PATH` inside the notebook if you keep them elsewhere.
+> The notebooks expect the raw MovieLens and TMDB CSV files to live under [`./Data/`](https://github.com/bgoswami2/UCB_Capstone_MovieInterestPrediction_Final/tree/main/Data) relative to this folder ([`./Data/ml-100k`](https://github.com/bgoswami2/UCB_Capstone_MovieInterestPrediction_Final/tree/main/Data/ml-100k), [`./Data/TMDB-5000`](https://github.com/bgoswami2/UCB_Capstone_MovieInterestPrediction_Final/tree/main/Data/TMDB-5000)). Adjust `DATA_DIR`, `ML_PATH`, and `TMDB_PATH` inside the notebook if you keep them elsewhere.
 
 ## Project Summary (non-technical)
 1. **Business challenge** – Identify which catalog titles each subscriber will enjoy so the marketing team can send fewer but higher impact campaigns.
@@ -65,3 +65,4 @@ This repository contains the final technical deliverable for the Movie Interest 
 2. **Data** – Download MovieLens 100K and TMDB 5000 datasets, unzip under `./Data/` as noted above.
 3. **Run notebook** – Launch Jupyter Lab/Notebook, open `capstone_final_modeling.ipynb`, and run cells sequentially. Hardware with appropriate RAM is recommended for TF-IDF + neural training.
 4. **Optional scripts** – Import helpers from `src/` when experimenting in separate notebooks or Python modules.
+
