@@ -45,7 +45,7 @@ ML_USER_COLS = ["user_id", "age", "gender", "occupation", "zip_code"]
 def _resolve_dataset_path(path: str | Path) -> Path:
     """
     Convert a possibly relative dataset path into an absolute path relative to
-    the Submission_2 directory.
+    the project's main directory.
     """
     candidate = Path(path)
     if candidate.is_absolute():
@@ -242,10 +242,10 @@ def build_enriched_ratings(
     ----------
     ml_base_path : str | Path
         Path to the MovieLens dataset directory. Relative paths are resolved
-        against the Submission_2 directory.
+        against the project's main directory.
     tmdb_base_path : str | Path
         Path to the TMDB dataset directory. Relative paths are resolved against
-        the Submission_2 directory.
+        the project's main directory.
     """
     ml_base = _resolve_dataset_path(ml_base_path)
     tmdb_base = _resolve_dataset_path(tmdb_base_path)
@@ -263,5 +263,6 @@ def build_enriched_ratings(
     enriched = ratings.merge(users, on="user_id", how="left", validate="many_to_one")
 
     return enriched
+
 
 
